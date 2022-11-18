@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "UserDashBoard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<fieldset>
+    <legend> Kullanıcı Paneli </legend>
+    @if (Session["UserName"] != null)
+    {<text>
+            Hoşgeldin @Session["UserName"].ToString()
+    </text>
+    <a style="margin:50px;" href="/Home/Index" class="waves-effect waves-light btn red darken-2">Anasayfaya Git</a>
+}
+</fieldset>
+

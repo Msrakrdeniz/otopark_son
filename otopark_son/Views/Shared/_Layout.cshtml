@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Otopark Otomasyonu</title>
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="~/Content/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <script type="text/javascript" src="~/Scripts/materialize.min.js"></script>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="nav-extended">
+            <div class="nav-wrapper" style="background-color:red">
+                <div class="container">
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="left hide-on-med-and-down">
+                        <li class="active"><a href="/Home/Index">Anasayfa</a></li>
+                        <li><a href="/Home/kayit">Kişi Kaydı</a></li>
+                        <li><a href="/Home/kisilerList">Kişiler</a></li>
+                        <li><a href="/Arac/AracKayit">Araç Kayıt</a></li>
+                        <li><a href="/Arac/AracBilgi">Araç Bilgileri</a></li>
+                        <li><a href="/Durum/otoparkdurumu">Otopark Durumu</a></li>
+                        <li><a href="/DropDown/Index">Otoparklar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <ul class="side-nav" id="mobile-demo">
+        <li class="active"><a href="#">Anasayfa</a></li>
+        <li><a href="/Home/kayit">Otopark Kayıt</a></li>
+        <li><a href="/Home/kisilerList">Otopark Araç Çıkış</a></li>
+        <li><a href="/Home/otoparkdurumu">Otopark Durumu</a></li>
+    </ul>
+    @*Header*@
+
+    @RenderBody()
+
+    @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+    @System.Web.Optimization.Scripts.Render("~/bundles/materialize")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
